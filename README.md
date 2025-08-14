@@ -1,5 +1,5 @@
 # Timeline Component - Take-Home Assignment
-
+> This project was developed within a 4-hour timeframe as part of a technical assessment.
 ## 🚀 Overview
 
 This project implements a compact and efficient horizontal timeline component in React, developed as part of a technical test. The component displays timeline items organized in horizontal lanes, with advanced features such as zoom, pan, drag & drop, and inline editing.
