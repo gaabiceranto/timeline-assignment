@@ -2,7 +2,7 @@
   "name": "airtable-timeline",
   "version": "1.0.0",
   "description": "Airtable Timeline",
-  "homepage": "https://[SEU_USUARIO].github.io/[NOME_DO_REPO]",
+  "homepage": "https://gaabiceranto.github.io/timeline-assignment",
   "scripts": {
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html --public-url ./",

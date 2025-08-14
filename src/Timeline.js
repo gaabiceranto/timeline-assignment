@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from "react";
-import { assignLanes, assignLanesByOriginalOrder } from "./assignLanes.js";
+import { assignLanesFixed } from "./assignLanes.js";
 import TimelineItem from "./TimelineItem.js";
 import EditModal from "./EditModal.js";
 import "./Timeline.css";
@@ -12,7 +12,6 @@ const Timeline = ({ items: initialItems }) => {
   const [dragStart, setDragStart] = useState(0);
   const [editingItem, setEditingItem] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [fixedLanes, setFixedLanes] = useState(null);
 
   const { minDate, maxDate, totalDays } = useMemo(() => {
     if (!items.length)
@@ -30,10 +29,7 @@ const Timeline = ({ items: initialItems }) => {
     return { minDate, maxDate, totalDays };
   }, [items]);
 
-  const lanes = useMemo(() => {
-    if (fixedLanes) return fixedLanes;
-    return assignLanesByOriginalOrder(items);
-  }, [items, fixedLanes]);
+  const lanes = useMemo(() => assignLanesFixed(items), [items]);
 
   const getDatePosition = useCallback(
     (date) => {
@@ -78,10 +74,6 @@ const Timeline = ({ items: initialItems }) => {
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setDragStart(e.clientX - panOffset);
-
-    if (!fixedLanes) {
-      setFixedLanes(assignLanesByOriginalOrder(items));
-    }
   };
 
   const handleMouseMove = useCallback(
@@ -95,9 +87,6 @@ const Timeline = ({ items: initialItems }) => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    setTimeout(() => {
-      setFixedLanes(null);
-    }, 100);
   };
 
   const handleEditItem = (item) => {
