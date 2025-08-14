@@ -1,8 +1,12 @@
-# Timeline Component - Airtable Take-Home Assignment
+# Timeline Component - Take-Home Assignment
 
 ## 🚀 Overview
 
-This project implements a compact and efficient horizontal timeline component in React, developed as part of a technical test for Airtable. The component displays timeline items organized in horizontal lanes, with advanced features such as zoom, pan, drag & drop, and inline editing.
+This project implements a compact and efficient horizontal timeline component in React, developed as part of a technical test. The component displays timeline items organized in horizontal lanes, with advanced features such as zoom, pan, drag & drop, and inline editing.
+
+## 🚀 Live Demo
+
+**Try it out:** [https://gaabiceranto.github.io/timeline-assignment/](https://gaabiceranto.github.io/timeline-assignment/)
 
 ## ✨ Implemented Features
 
@@ -136,6 +140,47 @@ npm start
 ```
 
 The project will automatically open in the browser at `http://localhost:1234`
+
+## 🌐 GitHub Pages
+
+### ✅ **Site is already working!**
+
+**tHE project is available at:** [https://gaabiceranto.github.io/timeline-assignment/](https://gaabiceranto.github.io/timeline-assignment/)
+
+### 📋 **How it was configured:**
+
+1. **Repository:** [github.com/gaabiceranto/timeline-assignment](https://github.com/gaabiceranto/timeline-assignment)
+2. **Branch:** `main` (files in root)
+3. **URL:** `https://gaabiceranto.github.io/timeline-assignment/`
+
+### 🔧 **For future updates:**
+
+1. **Make changes to the code**
+2. **Run the build:**
+
+```bash
+npm run build
+```
+
+3. **Copy files from `dist` folder to root:**
+
+```bash
+cp dist/* .
+```
+
+4. **Commit and push:**
+
+```bash
+git add .
+git commit -m "Update site"
+git push origin main
+```
+
+### 📝 **Important notes:**
+
+- The site is configured to use the `main` branch
+- Build files are placed in the repository root
+- Updates are automatically reflected after push
 
 ## 💭 What I Like About This Implementation
 
@@ -285,8 +330,6 @@ describe("timeline calculations", () => {
 - **Zoom**: Smooth transitions at 60fps
 - **Memory**: Optimized usage with proper cleanup
 
-
 ## 👩‍💻 Author
 
 **Gabriela Giovana Ceranto Pitoni**
-
