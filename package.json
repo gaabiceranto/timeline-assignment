@@ -2,14 +2,19 @@
   "name": "airtable-timeline",
   "version": "1.0.0",
   "description": "Airtable Timeline",
+  "homepage": "https://[SEU_USUARIO].github.io/[NOME_DO_REPO]",
   "scripts": {
-    "start": "parcel src/index.html --open"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --public-url ./",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.0.0"
   }
 }
