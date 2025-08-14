@@ -5,9 +5,7 @@
   "homepage": "https://gaabiceranto.github.io/timeline-assignment",
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html --public-url ./",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "parcel build index.html --public-url ./"
   },
   "dependencies": {
     "react": "^18.0.0",
